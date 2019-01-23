@@ -1,0 +1,6 @@
+微服务架构中，业务都被拆分成一个个独立服务，服务与服务直接的通信是基于http restful的。spring cloud有两种服务之间调用的方式,restTemplate+ribbon(是负载均衡的客户端)。Fegin默认继承了ribbon和Hystrix断路器
+Hystrix断路器
+本实例中：
+    注册服务：server
+    提供者: client
+    消费者：feigin_consumer(基于fegin),rest_ribbon(基于restTemplate+ribbon)

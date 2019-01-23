@@ -1,0 +1,10 @@
+
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8086/eureka/
+spring:
+  application:
+    name: service-robbin
+server:
+  port: 8088

@@ -1,0 +1,14 @@
+#1.eureka.client.registerWithEureka=true #是否将自身注册
+#2.eureka.client.fetchRegistry=false #如果为true，启动时报警.
+#通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
+server:
+  port: 8086
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
