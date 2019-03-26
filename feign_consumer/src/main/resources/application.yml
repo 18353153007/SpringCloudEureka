@@ -6,4 +6,4 @@ eureka:
      defaultZone: http://localhost:8086/eureka/
 spring:
   application:
-    name: service-feign
+    name: service-fei

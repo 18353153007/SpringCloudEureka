@@ -2,9 +2,7 @@ package client.Controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,4 +26,17 @@ public class MyController {
         map.put("maptest","**************");
         return map;
     }
+    @RequestMapping(value = "/user2", method = RequestMethod.POST)
+    public void getUser(@RequestBody User user) {
+        System.out.println(user.getId()+ " "+user.getName());
+    }
+
+
+//    @Value("${foo}")
+//    String foo;
+//    @RequestMapping(value = "/config")
+//    @ResponseBody
+//    public String hi(){
+//        return foo;
+//    }
 }
