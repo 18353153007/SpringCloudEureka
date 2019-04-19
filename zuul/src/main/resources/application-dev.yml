@@ -1,0 +1,34 @@
+server:
+  port: 8085
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8086/eureka
+spring:
+  application:
+    name: zuul
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes
+#zuul:
+#  routes:
+#    test:
+#      path: "/service/**"
+#      url: http://localhost:8083/
+#  ignored-services: "*"
+zuul:
+  routes:
+     one:
+      path: "/service/**"
+      serviceId: "test_one"
+  ignored-services: "*"
+ribbon:
+  eureka:
+    enabled: false
+test_one:
+  ribbon:
+    listOfServers: http://localhost:8083/,http://localhost:8088/

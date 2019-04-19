@@ -16,6 +16,11 @@ public class MyController {
     @RequestMapping("/hi")
     @ResponseBody
     public String home(@RequestParam String name) {
+//        try {
+////            Thread.sleep(1500);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
         return "hi " + name + ",i am from port:" + port;
     }
 
@@ -30,6 +35,14 @@ public class MyController {
     public void getUser(@RequestBody User user) {
         System.out.println(user.getId()+ " "+user.getName());
     }
+
+    @RequestMapping("/la")
+    @ResponseBody
+    public String test1(@RequestParam String name) {
+        System.out.println("***************************");
+        return "lalala " + name + ",i am from port:" + port;
+    }
+
 
 
 //    @Value("${foo}")

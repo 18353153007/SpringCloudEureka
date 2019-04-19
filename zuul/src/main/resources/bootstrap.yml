@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: zuul
+  profiles:
+    active: defult
+#  cloud:
+#    config:
+#      uri: http://localhost:8887/
+#      label: master
+#      profile: dev

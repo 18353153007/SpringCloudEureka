@@ -1,0 +1,21 @@
+#spring:
+#  profiles:
+#    active: defult
+server:
+  port: 8085
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8086/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes,refresh
+#zuul:
+#  ignored-services: "*"
+#  routes:
+#    service-hi: "/service/**"
+#  prefix: /api
