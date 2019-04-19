@@ -1,0 +1,156 @@
+<html>
+<head><title>Apache Tomcat/7.0.68 - Error report</title>
+    <style><!--
+    H1 {
+        font-family: Tahoma, Arial, sans-serif;
+        color: white;
+        background-color: #525D76;
+        font-size: 22px;
+    }
+
+    H2 {
+        font-family: Tahoma, Arial, sans-serif;
+        color: white;
+        background-color: #525D76;
+        font-size: 16px;
+    }
+
+    H3 {
+        font-family: Tahoma, Arial, sans-serif;
+        color: white;
+        background-color: #525D76;
+        font-size: 14px;
+    }
+
+    BODY {
+        font-family: Tahoma, Arial, sans-serif;
+        color: black;
+        background-color: white;
+    }
+
+    B {
+        font-family: Tahoma, Arial, sans-serif;
+        color: white;
+        background-color: #525D76;
+    }
+
+    P {
+        font-family: Tahoma, Arial, sans-serif;
+        background: white;
+        color: black;
+        font-size: 12px;
+    }
+
+    A {
+        color: black;
+    }
+
+    A.name {
+        color: black;
+    }
+
+    HR {
+        color: #525D76;
+    }
+
+    --></style>
+</head>
+<body><h1>HTTP Status 500 - Servlet.init() for servlet mvc-dispatcher threw exception</h1>
+<HR size="1" noshade="noshade">
+<p><b>type</b> Exception report</p>
+<p><b>message</b> <u>Servlet.init() for servlet mvc-dispatcher threw exception</u></p>
+<p><b>description</b> <u>The server encountered an internal error that prevented it from fulfilling this request.</u>
+</p>
+<p><b>exception</b>
+<pre>javax.servlet.ServletException: Servlet.init() for servlet mvc-dispatcher threw exception
+	org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:436)
+	org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1078)
+	org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+	org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	java.lang.Thread.run(Thread.java:748)
+</pre>
+</p><p><b>root cause</b>
+<pre>org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'gitVersionController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'gitRepositoryState' is defined
+	org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:311)
+	org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:667)
+	org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:633)
+	org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:681)
+	org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:552)
+	org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:493)
+	org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:436)
+	org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1078)
+	org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+	org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	java.lang.Thread.run(Thread.java:748)
+</pre>
+</p><p><b>root cause</b>
+<pre>org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'gitRepositoryState' is defined
+	org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:698)
+	org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1175)
+	org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:284)
+	org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:275)
+	org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:512)
+	org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:486)
+	org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:615)
+	org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:169)
+	org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1214)
+	org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	org.springframework.web.servlet.FrameworkServlet.configureAndRefreshWebApplicationContext(FrameworkServlet.java:667)
+	org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:633)
+	org.springframework.web.servlet.FrameworkServlet.createWebApplicationContext(FrameworkServlet.java:681)
+	org.springframework.web.servlet.FrameworkServlet.initWebApplicationContext(FrameworkServlet.java:552)
+	org.springframework.web.servlet.FrameworkServlet.initServletBean(FrameworkServlet.java:493)
+	org.springframework.web.servlet.HttpServletBean.init(HttpServletBean.java:136)
+	javax.servlet.GenericServlet.init(GenericServlet.java:158)
+	org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:505)
+	org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:956)
+	org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:436)
+	org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1078)
+	org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:625)
+	org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:316)
+	java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	java.lang.Thread.run(Thread.java:748)
+</pre>
+</p><p><b>note</b> <u>The full stack trace of the root cause is available in the Apache Tomcat/7.0.68 logs.</u></p>
+<HR size="1" noshade="noshade">
+<h3>Apache Tomcat/7.0.68</h3></body>
+</html>
