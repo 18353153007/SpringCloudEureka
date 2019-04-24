@@ -1,0 +1,17 @@
+spring:
+ application:
+  name: zipkin
+ main:
+  allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8086/eureka/
+server:
+  port: 9099
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

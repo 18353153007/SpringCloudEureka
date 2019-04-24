@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: service-provide-trace-elk
+#  zipkin:
+#    base-url: http://localhost:9099
+server:
+  port: 9095
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8086/eureka/

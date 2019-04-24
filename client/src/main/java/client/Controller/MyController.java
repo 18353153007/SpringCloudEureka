@@ -1,5 +1,7 @@
 package client.Controller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +15,7 @@ public class MyController {
     @Value("${server.port}")
     String port;
 
+    private final static Logger logger = LoggerFactory.getLogger(MyController.class);
     @RequestMapping("/hi")
     @ResponseBody
     public String home(@RequestParam String name) {
@@ -21,6 +24,7 @@ public class MyController {
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
+        logger.info("hi two");
         return "hi " + name + ",i am from port:" + port;
     }
 

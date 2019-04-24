@@ -6,6 +6,8 @@ spring:
       label: master
       profile: dev
       uri: http://localhost:8887/
+  zipkin:
+    base-url: http://localhost:9099
 server:
   port: 8088
 eureka:
