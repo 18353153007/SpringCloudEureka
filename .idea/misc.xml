@@ -15,6 +15,12 @@
         <option value="$PROJECT_DIR$/hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/zuul/pom.xml" />
         <option value="$PROJECT_DIR$/authentication/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin_client/pom.xml" />
+        <option value="$PROJECT_DIR$/zipkin_get/pom.xml" />
+        <option value="$PROJECT_DIR$/elk/pom.xml" />
+        <option value="$PROJECT_DIR$/autho/pom.xml" />
+        <option value="$PROJECT_DIR$/autho_jwt/pom.xml" />
       </list>
     </option>
   </component>

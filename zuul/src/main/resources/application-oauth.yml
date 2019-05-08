@@ -1,0 +1,30 @@
+server:
+  port: 8085
+eureka:
+  instance:
+    prefer-ip-address: false
+  client:
+    service-url:
+      defaultZone: http://localhost:8086/eureka
+spring:
+  application:
+    name: zuul
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes
+security:
+  oauth2:
+    client:
+      access-token-uri:  http://127.0.0.1:9092/oauth/token
+      user-authorization-uri: http://127.0.0.1:9092/oauth/authorize
+      client-id: client_1
+      client-secret: 123456
+    resource:
+      jwt:
+        key-value: 2344
+#      prefer-token-info: false
+zuul:
+  sensitive-headers: [Cookie, Set-Cookie]
+#  ignored-headers: Authorization

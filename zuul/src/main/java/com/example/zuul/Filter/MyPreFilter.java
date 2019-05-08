@@ -4,9 +4,10 @@ import com.example.zuul.FilterUtil.Util;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
+import org.springframework.security.web.FilterChainProxy;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MyPreFilter extends ZuulFilter {
     @Override
     public String filterType() {

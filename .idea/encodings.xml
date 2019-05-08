@@ -2,11 +2,17 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/authentication" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/autho" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/autho_jwt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elk" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/feign_consumer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hystrix" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/rest_ribbon" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin_client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin_get" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />
   </component>
 </project>

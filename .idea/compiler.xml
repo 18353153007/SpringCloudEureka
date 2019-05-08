@@ -7,12 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="authentication" />
+        <module name="autho_jwt" />
         <module name="client" />
+        <module name="elk" />
         <module name="feign_consumer" />
         <module name="FirstSprigncloud" />
         <module name="hystrix" />
         <module name="rest_ribbon" />
         <module name="server" />
+        <module name="zipkin" />
+        <module name="zipkin_client" />
+        <module name="zipkin_get" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>

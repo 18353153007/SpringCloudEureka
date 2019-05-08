@@ -6,7 +6,7 @@ import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MyPreFilter2 extends ZuulFilter {
     @Override
     public String filterType() {

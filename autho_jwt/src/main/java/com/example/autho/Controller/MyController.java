@@ -1,30 +1,19 @@
-package com.example.authentication.Controller;
+package com.example.autho.Controller;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;
-import org.springframework.security.web.FilterChainProxy;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.http.HttpServletRequest;
-import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/c1")
+@RequestMapping("/lcc")
 public class MyController {
 
     @RequestMapping("/test1")
-    public String tets(HttpServletRequest request) {
-        Enumeration headerNames = request.getHeaderNames();
-        while (headerNames.hasMoreElements()) {
-            String key = (String) headerNames.nextElement();
-            System.out.println(key + ": " + request.getHeader(key));
-        }
-        System.out.println("----------------header----------------");
+    public String tets() {
         return "test1";
     }
 
@@ -34,6 +23,11 @@ public class MyController {
         userInfo.put("user",user.getUserAuthentication().getPrincipal());
         userInfo.put("authorities",AuthorityUtils.authorityListToSet(user.getUserAuthentication().getAuthorities()));
         return userInfo;
+    }
+
+    @RequestMapping(value = "/user2",produces = "application/json")
+    public OAuth2Authentication user2(OAuth2Authentication user) {
+        return user;
     }
 
 }

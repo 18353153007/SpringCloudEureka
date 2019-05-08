@@ -1,3 +1,33 @@
+PUT http://localhost:8087/lcc/test5
+Accept: */*
+Content-Type: application/json
+
+{"userId":1}
+
+<> 2019-04-26T060459.200.txt
+
+###
+
+PUT http://localhost:8087/lcc/test5
+Accept: */*
+Content-Type: application/json
+
+{"userId":1}
+
+<> 2019-04-26T060455.200.txt
+
+###
+
+PUT http://localhost:8087/lcc/test5
+Accept: */*
+Content-Type: application/json
+
+{"userId":1}
+
+<> 2019-04-26T060331.200.txt
+
+###
+
 POST http://10.160.0.95:8084/ebsctl/v1.0/tdcs/agent/heartbeat
 Accept: */*
 Cache-Control: no-cache

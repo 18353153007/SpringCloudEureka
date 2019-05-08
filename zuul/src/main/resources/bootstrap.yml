@@ -2,7 +2,10 @@ spring:
   application:
     name: zuul
   profiles:
-    active: defult
+    active: oauth
+#  security:
+#    user:
+#      password: 123456
 #  cloud:
 #    config:
 #      uri: http://localhost:8887/

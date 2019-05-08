@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: jwt
+server:
+  port: 9092
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8086/eureka
+  instance:
+    ip-address: false
+signing:
+ key: 2344
