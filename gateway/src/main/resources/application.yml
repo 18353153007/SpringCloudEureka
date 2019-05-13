@@ -1,0 +1,26 @@
+server:
+  port: 9101
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8086/eureka
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true #是否与服务发现组件进行结合，默认是false.，通过 serviceId(必须设置成大写) 转发到具体的服务实例。默认为false，设为true便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+#  cloud:
+#    gateway:
+#     default-filters:
+#     routes:
+#      - id: SERVICE-HI
+#        uri: lb://service-hi #lb代表从服务中心获取服务，根据服务ID进行转发
+#        predicates:
+#         - Path=/hi/{segment1}/{segment2}
+#        filters:
+##         - StripPrefix=1
+##         - PrefixPath=/cloud
+#         - SetPath=/{segment1}/{segment2}
